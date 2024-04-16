@@ -12,11 +12,6 @@ pipeline {
             steps {
                 sh 'mvn test'
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.txt'
-                }
-            }
         }
         // stage ('Análise de Qualidade de Código') {
         //     steps {
