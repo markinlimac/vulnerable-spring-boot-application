@@ -17,7 +17,7 @@ pipeline {
         stage ('Análise de Qualidade de Código') {
             steps {
                 withSonarQubeEnv('sonarqube') {
-                    sh 'mvn sonar:sonar'
+                    sh 'mvn sonar:sonar -Dsonar.organization=markinlimac'
                 }
             }
         }
