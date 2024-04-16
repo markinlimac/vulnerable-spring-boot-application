@@ -13,11 +13,14 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        // stage ('Análise de Qualidade de Código') {
-        //     steps {
-        //         echo 'Integração com ferramentas como SonarQube para análise estática de código (pode ser qualquer Lint/SAST)'
-        //     }
-        // }
+
+        stage ('Análise de Qualidade de Código') {
+            steps {
+                withSonarQubeEnv('sonarqube') {
+                    sh 'mvn sonar:sonar'
+                }
+            }
+        }
         // stage ('Contêinerização') {
         //     steps {
         //         echo 'Criação de uma imagem Docker do aplicativo'
