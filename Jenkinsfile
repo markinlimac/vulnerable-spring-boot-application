@@ -7,11 +7,17 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        // stage ('Testes Unitários') {
-        //     steps {
-        //         echo 'Execução dos testes unitários do repositório na pipeline'
-        //     }
-        // }
+
+        stage ('Testes Unitários') {
+            steps {
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
         // stage ('Análise de Qualidade de Código') {
         //     steps {
         //         echo 'Integração com ferramentas como SonarQube para análise estática de código (pode ser qualquer Lint/SAST)'
