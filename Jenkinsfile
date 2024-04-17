@@ -26,6 +26,10 @@ pipeline {
             steps {
                 script {
                     dockerapp = docker.build("markinlimac/vulnerable-spring-boot-application:${env.BUILD_ID}", "-f ./Dockerfile ./")
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                        dockerapp.push('latest')
+                        dockerapp.push("${env.BUILD_ID}")
+                    }
                 }
             }
         }
