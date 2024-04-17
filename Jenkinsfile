@@ -25,7 +25,7 @@ pipeline {
         stage ('Contêinerização') {
             steps {
                 script {
-                    dockerapp = docker.build("markinlimac/vulnerable-spring-boot-application", "-f ./Dockerfile ./")
+                    dockerapp = docker.build("markinlimac/vulnerable-spring-boot-application:${env.BUILD_ID}", "-f ./Dockerfile ./")
                 }
             }
         }
