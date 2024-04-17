@@ -1,3 +1,15 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=bugs)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=coverage)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.contrastsecurity.demo%3Aprovider-search&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=com.contrastsecurity.demo%3Aprovider-search)
+
 # Vulnerable Spring Boot Application
 
 This application is an intentionally vulnerable Spring Boot application. The intent is to demonstrate the capabilities of Contrast Security's Maven plugin when used with continuous integration (such as TravisCI or CircleCI).
