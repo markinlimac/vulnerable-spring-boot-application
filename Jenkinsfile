@@ -21,11 +21,15 @@ pipeline {
                 }
             }
         }
-        // stage ('Contêinerização') {
-        //     steps {
-        //         echo 'Criação de uma imagem Docker do aplicativo'
-        //     }
-        // }
+
+        stage ('Contêinerização') {
+            steps {
+                script {
+                    dockerapp = docker.build("markinlimac/vulnerable-spring-boot-application", "-f ./Dockerfile ./")
+                }
+            }
+        }
+
         // stage ('Deploy') {
         //     steps {
         //         echo 'Implantação do contêiner em um ambiente Kubernetes, utilizando manifestos configurados para o ambiente de staging/testes'
