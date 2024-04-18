@@ -34,10 +34,10 @@ pipeline {
             }
         }
 
-        // stage ('Deploy') {
-        //     steps {
-        //         echo 'Implantação do contêiner em um ambiente Kubernetes, utilizando manifestos configurados para o ambiente de staging/testes'
-        //     }
-        // }
+        stage ('Deploy') {
+            steps {
+                echo 'Implantação do contêiner em um ambiente Kubernetes, utilizando manifestos configurados para o ambiente de staging/testes'
+            }
+        }
     }
 }
