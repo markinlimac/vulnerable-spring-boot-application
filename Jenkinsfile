@@ -27,7 +27,7 @@ pipeline {
                 script {
                     dockerapp = docker.build("280398/vulnerable-spring-boot-application:${env.BUILD_ID}", "-f ./Dockerfile ./")
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-                        // dockerapp.push('latest')
+                        dockerapp.push('latest')
                         dockerapp.push("${env.BUILD_ID}")
                     }
                 }
@@ -36,7 +36,9 @@ pipeline {
 
         stage ('Deploy') {
             steps {
-                echo 'Implantação do contêiner em um ambiente Kubernetes, utilizando manifestos configurados para o ambiente de staging/testes'
+                withKubeConfig([credentialsId: 'kubeconfig']) {
+                    sh 'kubectl apply -f ./k8s/deployment.yaml'
+                }
             }
         }
     }
