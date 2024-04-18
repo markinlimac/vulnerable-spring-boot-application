@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-app
-          image: 280398/vulnerable-spring-boot-application
+          image: 280398/vulnerable-spring-boot-application:{{tag}}
           ports:
             - containerPort: 8080
 ---
