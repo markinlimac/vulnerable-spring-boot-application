@@ -27,12 +27,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: vulnerable-spring-boot-application-service
+ name: vulnerable-spring-boot-application
 #  namespace: staging
 spec:
  type: LoadBalancer
  selector:
-   app: vulnerable-spring-boot-application-service
+   app: vulnerable-spring-boot-application
  ports:
    - protocol: TCP
      port: 80
